@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Тетрис</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="board-wrap">
+      <canvas id="board" width="300" height="600" aria-label="Игровое поле"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <h2 id="overlay-title"></h2>
+        <p id="overlay-hint"></p>
+        <button id="restart" type="button">Заново</button>
+      </div>
+    </section>
+    <aside class="hud">
+      <h1>ТЕТРИС</h1>
+      <p class="caption">СЛЕДУЮЩАЯ</p>
+      <canvas id="next" width="140" height="120"></canvas>
+      <div class="stat"><span>Счёт</span><strong id="score">000000</strong></div>
+      <div class="stat"><span>Уровень</span><strong id="level">1</strong></div>
+      <div class="stat"><span>Линии</span><strong id="lines">0</strong></div>
+      <ul class="help">
+        <li><kbd>←</kbd> <kbd>→</kbd> движение</li>
+        <li><kbd>↓</kbd> ускорить</li>
+        <li><kbd>↑</kbd> / <kbd>X</kbd> поворот</li>
+        <li><kbd>Z</kbd> против часовой</li>
+        <li><kbd>Пробел</kbd> сброс вниз</li>
+        <li><kbd>P</kbd> пауза</li>
+        <li><kbd>R</kbd> заново</li>
+      </ul>
+    </aside>
+  </main>
+  <script src="tetris.js"></script>
+</body>
+</html>

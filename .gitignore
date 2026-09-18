@@ -8,9 +8,10 @@
 [Mm]emoryCaptures/
 [Rr]ecordings/
 
-*.csproj
+/*.csproj
+/*.sln
 *.unityproj
-*.sln
+!csharp/*.csproj
 *.suo
 *.tmp
 *.user
@@ -32,5 +33,5 @@ sysinfo.txt
 crashlytics-build.properties
 InitTestScene*.unity*
 
-/[Aa]ssets/AssetStoreTools*
-.utmp/
+csharp/bin/
+csharp/obj/

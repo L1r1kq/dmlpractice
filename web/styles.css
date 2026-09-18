@@ -1,0 +1,145 @@
+:root {
+  --bg: #10121a;
+  --panel: #161822;
+  --text: #eef1ff;
+  --muted: #8b91a8;
+  --accent: #4f74f6;
+  --frame: #6b73a1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at top, #1b2030, var(--bg) 55%);
+  color: var(--text);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 24px;
+}
+
+.board-wrap {
+  position: relative;
+  padding: 10px;
+  background: var(--panel);
+  border: 3px solid var(--frame);
+  border-radius: 12px;
+}
+
+#board {
+  display: block;
+  background: #0c0e16;
+}
+
+.overlay {
+  position: absolute;
+  inset: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(8, 10, 16, 0.78);
+  text-align: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.overlay p {
+  margin: 0;
+  color: var(--muted);
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 22px;
+  background: var(--accent);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(1.08);
+}
+
+.hud {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  letter-spacing: 0.18em;
+}
+
+.caption,
+.stat span,
+.help {
+  color: var(--muted);
+}
+
+#next {
+  background: #0c0e16;
+  border: 2px solid var(--frame);
+  border-radius: 8px;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 20px;
+}
+
+.stat strong {
+  font-size: 28px;
+}
+
+.help {
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+  line-height: 1.7;
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.4em;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #2a3044;
+  color: var(--text);
+  font-family: inherit;
+}
+
+@media (max-width: 760px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .hud {
+    width: 300px;
+  }
+}
